@@ -1,0 +1,70 @@
+/* Make the settings page fill the entire screen width */
+.settings-page {
+    position: absolute;
+    top: 60px; /* Adjust for header height */
+    left: 60px; /* Adjust for sidebar width */
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 60px); /* Full width when sidebar is collapsed */
+    height: calc(100vh - 60px); /* Full height minus header */
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f4f7fc;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  
+  /* When sidebar is expanded */
+  .sidebar.open ~ .settings-page {
+    left: 300px;
+    width: calc(100% - 300px);
+  }
+  
+  /* Title */
+  .settings-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Full-width sections */
+  .settings-section {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Each setting row should span full width */
+  .setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 15px 0;
+  }
+  
+  /* Buttons & Select dropdown */
+  .toggle-btn, .settings-btn {
+    background: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .toggle-btn:hover, .settings-btn:hover {
+    background: #4e0fa8;
+  }
+  
+  select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,192 @@
+
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-left:10px ;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.app-title {
+  font-size: 22px;
+  font-weight: bold;
+  flex-grow: 1;
+  margin-left: 6px
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 250px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #777;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+/* Header (Fixed at the Top) */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Set header height */
+  background: #222;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; /* Keep it above other elements */
+}
+
+/* Sidebar (Starts Below Header) */
+/* Sidebar (Collapsed by Default) */
+/* Sidebar (Collapsed by Default) */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Below header */
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 60px; /* Default collapsed width */
+  background: #222;
+  color: white;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Expanded Sidebar */
+.sidebar.open {
+  width: 300px;
+}
+
+/* Sidebar Menu Items */
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  color: white;
+}
+
+/* Ensure Icons Stay Visible When Sidebar is Collapsed */
+.sidebar ul li svg {
+  font-size: 24px;
+  min-width: 40px; /* Icons should always take up space */
+  margin-right: 10px;
+  margin-left: -7px;
+}
+
+/* Hide Text When Sidebar is Collapsed */
+.sidebar ul li span {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Text When Sidebar is Expanded */
+.sidebar.open ul li span {
+  display: inline;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+/* Chatbox */
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  left: 90px;
+  right: 10px; /* Increased right spacing */
+  width: calc(100% - 120px); /* Adjusted to maintain proper width */
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.sidebar.open ~ .chat-box {
+  left: 200px;
+  width: calc(100% - 200px);
+}
+
+
+
+
+.chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.file-input {
+  display: none; /* Hide default file input */
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.send-btn {
+  color: #007bff; /* Blue color for send button */
+}

@@ -1,0 +1,202 @@
+/* 🌟 Profile Page - Fullscreen Layout */
+.profile-page {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fc;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* 🎭 Adjust for Sidebar Open */
+.sidebar.open ~ .profile-page {
+  left: 300px;
+}
+
+/* 🎨 Profile Banner */
+.profile-banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+}
+
+/* 🏷 Profile Card */
+.profile-card {
+  background: white;
+  width: 99%;
+  max-width: 420px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* 👤 Profile Picture */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: -60px; /* Ensure it overlaps nicely */
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+  width: 80%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* ✍️ Edit Icon on Profile Picture */
+.edit-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: white;
+  color: #6a11cb;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏷 User Info */
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-role {
+  font-size: 14px;
+  color: white;
+  background: #6a11cb;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+/* 🏷 Profile Info Section */
+.profile-info {
+  margin-top: 15px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+/* 🌍 Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #6a11cb;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* 🎛 Action Buttons */
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* ✍️ Edit Profile Button */
+.edit-profile {
+  flex: 1;
+  padding: 10px;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.edit-profile:hover {
+  background: #4e0fa8;
+}
+
+/* 🌗 Theme Toggle Button */
+.theme-toggle {
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #6a11cb;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background: rgba(106, 17, 203, 0.2);
+}
+
+/* 🌙 Dark Mode Styles */
+.dark-mode {
+  background: #1e1e2f;
+}
+
+.dark-mode .profile-card {
+  background: #2b2b3d;
+  color: white;
+}
+
+.dark-mode .info-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .social-icon {
+  color: #ff9f1a;
+}
+
+.dark-mode .edit-profile {
+  background: #ff9f1a;
+}
+
+.dark-mode .edit-profile:hover {
+  background: #ff7a00;
+}

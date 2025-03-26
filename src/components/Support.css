@@ -1,0 +1,38 @@
+.support-container {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.support-container h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question-image {
+    
+    width: 500px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.support-container p {
+    font-size: 18px;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.support-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  
+  /* Adjust when sidebar expands */
+  .sidebar.open ~ .support-container {
+    max-width: 700px;
+  }
+  
